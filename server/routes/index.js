@@ -36,9 +36,9 @@ router.get('/api/getById', Common.getById)
 router.get('/api/query', Client.query)
 
 //
-// router.get('/api/test', (req, res) => {
-// 	res.status(200).send('Healthy!');
-// })
+router.get('/api/test', (req, res) => {
+	res.status(200).send('Healthy!');
+})
 
 //test routes
 const Test = require('./Test')
