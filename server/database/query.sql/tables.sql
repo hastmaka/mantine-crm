@@ -21,8 +21,6 @@ create table services
     service_bath         varchar(25) null,
     service_bed          varchar(25) null,
     service_zip          text        null,
-    service_note         longtext    null,
-    service_document     longtext    null,
     service_pet          tinyint(1)  null,
     service_price_from   varchar(25) null,
     service_price_to     varchar(25) null,
@@ -38,9 +36,11 @@ create table documents
 (
     document_id        int auto_increment
         primary key,
-    document_data      longtext null,
-    service_service_id int      null,
-    service_active     tinyint  null,
+    document_data      longtext  null,
+    service_service_id int       null,
+    document_active    tinyint   null,
+    created_at         timestamp null,
+    updated_at         timestamp null,
     constraint documents_ibfk_1
         foreign key (service_service_id) references services (service_id)
 );
@@ -57,6 +57,8 @@ create table notes
     note_severity      varchar(25) null,
     service_service_id int         null,
     note_active        tinyint     null,
+    created_at         timestamp   null,
+    updated_at         timestamp   null,
     constraint notes_ibfk_1
         foreign key (service_service_id) references services (service_id)
 );
