@@ -1,0 +1,20 @@
+/* For Webkit browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+    width: 2px; /* Set the width of the scroll bar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a0a0a0; /* Color of the thumb (the draggable part) */
+    border-radius: 3px; /* Rounded corners of the thumb */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #00000040; /* Color of the track (the non-draggable part) */
+}
+
+
+[role="option"]{
+    span{
+        text-transform: capitalize;
+    }
+}

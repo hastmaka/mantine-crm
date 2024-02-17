@@ -1,0 +1,50 @@
+.select{
+    //background-color: red;
+    & > div > input {
+        min-height: 2rem;
+        height: 2rem;
+        width: 6rem;
+        &:focus-within {
+            border-color: var(--mantine-color-dark-3);
+        }
+    }
+}
+.pagination {
+    & > div > button {
+        &[data-active] {
+            pointer-events: none;
+            color: var(--mantine-color-dimmed);
+            background-color: var(--mantine-color-placeholder);
+            border-color: var(--mantine-color-default-border);
+        }
+        &:hover{
+            background-color: var(--mantine-color-placeholder);
+        };
+        color: var(--mantine-color-text);
+        background-color: var(--mantine-color-body);
+    }
+}
+
+.modal-header{
+    border-radius: 0;
+    background-color: var(--mantine-color-body);
+    color: var(--mantine-color-text);
+    border-bottom: 0.0625rem solid var(--mantine-color-default-border);
+}
+
+.modal-body{
+    padding: 0 !important;
+}
+
+.modal-content{
+    overflow-y: unset;
+}
+
+
+.editIcon{
+    stroke: var(--mantine-color-green-5)
+}
+
+.deleteIcon{
+    stroke: var(--mantine-color-red-5)
+}

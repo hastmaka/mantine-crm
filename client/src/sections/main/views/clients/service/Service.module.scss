@@ -1,0 +1,57 @@
+.accordion{
+    > :not(:first-child) {
+        margin-top: 1rem;
+        //border-top-right-radius: calc(0.25rem * 1);
+        //border-top-left-radius: calc(0.25rem * 1);
+    }
+    div > button {
+        &[aria-expanded="true"]{
+            background-color: var(--mantine-color-default-border);
+            border-bottom-left-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+        }
+    }
+}
+
+.item{
+    border-radius: calc(0.25rem * 1);
+    border: 0.0625rem solid var(--mantine-color-default-border) !important;
+    background-color: var(--mantine-color-body);
+    button{
+        transition: all .2s ease;
+        &:hover{
+            background-color: var(--mantine-color-default-border);
+        }
+    }
+}
+
+.panel {
+    > :first-child{
+        padding-top: 1rem;
+    }
+    > div > :not(:first-child) {
+        margin-top: 1rem;
+        //border-top-right-radius: calc(0.25rem * 1);
+        //border-top-left-radius: calc(0.25rem * 1);
+    }
+}
+
+.editIcon {
+    stroke: var(--mantine-color-green-5)
+}
+
+.deleteIcon{
+    stroke: var(--mantine-color-red-5)
+}
+
+.pending{
+    stroke: var(--mantine-color-orange-5)
+}
+
+.on-progress{
+    stroke: var(--mantine-color-blue-5)
+}
+
+.done{
+    stroke: var(--mantine-color-green-5)
+}
