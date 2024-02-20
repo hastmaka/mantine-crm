@@ -3,7 +3,7 @@ module.exports = {
         return {success: true, data: data.rows || data, dataCount: data.count}
     },
 
-    handleError (res, error, code = 400) {
+    handleError (res, error, code = 400) {debugger
         res.status(code);
         res.json({
             status: code,

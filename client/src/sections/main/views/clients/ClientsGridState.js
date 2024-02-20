@@ -125,7 +125,7 @@ export function ClientsGridState(props) {
 		// debugger
 		setState({loading: true});
 		const res = await FetchApi(store.api.read,null,null,query)
-		updateGrid(res)
+		if(res.success) {updateGrid(res)}
 	}
 
 	useEffect (() => {

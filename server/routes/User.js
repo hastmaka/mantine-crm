@@ -44,15 +44,15 @@ const user = {
                 }
             }).then(user => {
                 if(!user) {
-                    handleError(res, 'User is not in DB', 500)
+                    return handleError(res, 'User is not in DB', 500)
                 }
                 if(user.get('user_active')) {
                     res.json(handleDataToReturn(user))
                 } else {
-                    handleError(res, 'User is not active, Contact Admin', 403)
+                    return handleError(res, 'User is not active, Contact Admin', 403)
                 }
             }).catch(err => {
-                handleError(res, 'User is not in DB')
+                handleError(res,'Internal error accessing DB')
             })
         }
     },
