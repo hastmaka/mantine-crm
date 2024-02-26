@@ -1,13 +1,14 @@
 import {
 	Paper,
 	Title,
-	Center, Text, ActionIcon, Box, Flex, Loader,
+	Center, Text, ActionIcon, Box, Flex, Loader, Button,
 } from '@mantine/core';
 import {IconMoonStars, IconSun} from "@tabler/icons-react";
 import {themeSignal} from "../../signals/themeSignal.js";
 import {loginSignal} from "../../signals/loginSignal.js";
 import PowerBy from "../../components/PowerBy.jsx";
 import {lazy, Suspense} from "react";
+import {FetchApi} from "../../api/FetchApi.js";
 //dynamic
 const SignIn = lazy(() => import('./signIn'))
 const Forgot = lazy(() => import('./forgot'))
@@ -58,6 +59,20 @@ export default function Login() {
 						{loginForms[active]}
 					</Suspense>
 				</Paper>
+				
+				<Button
+					onClick={() => {
+						FetchApi(
+							'test',
+							null,
+							null,
+						).then(res => {
+							if(res.status === 200) {
+								console.log ('server working')
+							}
+						})
+					}}
+				>test cors</Button>
 			</Flex>
 		</Center>
 	);

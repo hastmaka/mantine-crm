@@ -41,7 +41,7 @@ router.get('/api/test', (req, res) => {
 })
 
 //test routes
-const Test = require('./Test')
-router.get('/api/test', Test.list)
+// const Test = require('./Test')
+// router.get('/api/test', Test.list)
 
 module.exports = router;

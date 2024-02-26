@@ -1,7 +1,7 @@
 import {generalSignal} from "../signals/generalSignal.js";
 
 export async function FetchApi(endpoint, method, data, query = {}, token = null) {
-    let url = new URL('http://127.0.0.1:3000/api/' + endpoint);
+    let url = new URL('https://34.82.152.88:3000/api/' + endpoint);
     url.search = new URLSearchParams(query).toString();
 
     let options = {

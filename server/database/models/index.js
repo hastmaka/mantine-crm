@@ -1,5 +1,4 @@
 const Sequelize = require('sequelize');
-const Op = Sequelize.Op;
 const fs = require('fs');
 const path = require('path');
 const db = {};
@@ -20,6 +19,14 @@ let sequelize = new Sequelize('realtop', 'root', 'Police123@', {
     },
     logging: console.log
 });
+
+sequelize.authenticate()
+    .then(() => {
+        console.log('Database connection has been established successfully.');
+    })
+    .catch(err => {
+        console.error('Unable to connect to the database:', err);
+    });
 
 fs.readdirSync(__dirname)
     .filter(function(file) {
