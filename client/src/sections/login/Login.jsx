@@ -60,19 +60,19 @@ export default function Login() {
 					</Suspense>
 				</Paper>
 				
-				<Button
-					onClick={() => {
-						FetchApi(
-							'test',
-							null,
-							null,
-						).then(res => {
-							if(res.status === 200) {
-								console.log ('server working')
-							}
-						})
-					}}
-				>test cors</Button>
+				{/*<Button*/}
+				{/*	onClick={() => {*/}
+				{/*		FetchApi(*/}
+				{/*			'test',*/}
+				{/*			null,*/}
+				{/*			null,*/}
+				{/*		).then(res => {*/}
+				{/*			if(res.status === 200) {*/}
+				{/*				console.log ('server working')*/}
+				{/*			}*/}
+				{/*		})*/}
+				{/*	}}*/}
+				{/*>test cors</Button>*/}
 			</Flex>
 		</Center>
 	);

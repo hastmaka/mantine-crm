@@ -1,7 +1,8 @@
 import {generalSignal} from "../signals/generalSignal.js";
 
 export async function FetchApi(endpoint, method, data, query = {}, token = null) {
-    let url = new URL('https://34.82.152.88:3000/api/' + endpoint);
+    let url = new URL(import.meta.env.VITE_API_URL + endpoint);
+    // let url = new URL('https://35.185.226.28:443/api/' + endpoint);
     url.search = new URLSearchParams(query).toString();
 
     let options = {
@@ -29,51 +30,8 @@ export async function FetchApi(endpoint, method, data, query = {}, token = null)
             console.log({ response, resData });
             return resData;
         }
-    } catch (e) {debugger
+    } catch (e) {
         generalSignal.activeView = 'error'
         throw new Error(e);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
