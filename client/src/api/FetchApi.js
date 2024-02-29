@@ -15,11 +15,10 @@ export async function FetchApi(endpoint, method, data, query = {}, token = null)
     if(method) {
         options.body = JSON.stringify(data)
     }
-
+    
     try {
         const response = await fetch(url, options);
         let resData = await response.json();
-        
         if (resData.success) {
             return resData;
         } else {

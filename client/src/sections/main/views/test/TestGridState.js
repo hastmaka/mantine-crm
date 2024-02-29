@@ -122,5 +122,6 @@ export function TestGridState(props) {
 	return {
 		...state,
 		handleConfirm,
+		handlePagination
 	}
 }

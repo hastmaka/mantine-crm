@@ -1,4 +1,5 @@
 export const LasVegasZipCodes = [
+    "Any",
     "89000",
     "89001",
     "89002",

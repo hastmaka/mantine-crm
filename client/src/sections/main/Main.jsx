@@ -1,7 +1,8 @@
 import {ActionIcon, AppShell, Burger, Center, Group, Text} from '@mantine/core';
 import {generalSignal} from "../../signals/generalSignal.js";
 import TabPanel from "./TabPanel.jsx";
-import {IconBell, IconUserCircle} from "@tabler/icons-react";
+import {IconBell, IconMoonStars, IconSun, IconUserCircle} from "@tabler/icons-react";
+import {themeSignal} from "../../signals/themeSignal.js";
 
 export default function Main () {
 	const {burger} = generalSignal
@@ -34,11 +35,32 @@ export default function Main () {
 						/>
 
 						<Group gap={8}>
-							<ActionIcon variant="default" radius="xl" size="lg" aria-label="notifications">
+							<ActionIcon
+								variant="default"
+								radius="xl"
+								size="lg"
+								aria-label="notifications"
+								onClick={() => {}}
+							>
 								<IconBell/>
 							</ActionIcon>
-							<ActionIcon variant="default" radius="xl" size="lg" aria-label="profile">
+							<ActionIcon
+								variant="default"
+								radius="xl"
+								size="lg"
+								aria-label="profile"
+								onClick={() => {}}
+							>
 								<IconUserCircle/>
+							</ActionIcon>
+							<ActionIcon
+								variant="default"
+								radius="xl"
+								size="lg"
+								aria-label="profile"
+								onClick={themeSignal.toggleTheme}
+							>
+								{themeSignal.theme === 'dark' ? <IconSun /> : <IconMoonStars />}
 							</ActionIcon>
 						</Group>
 					</Group>

@@ -23,8 +23,11 @@ export default function Center({state}) {
             >
                 <Tabs.List
                     pos='sticky'
-                    style={{top: 0, zIndex: 1000}}
-                    bg='dark.7'
+                    style={{
+                        top: 0,
+                        zIndex: 1000,
+                        backgroundColor: 'var(--mantine-color-body)'
+                    }}
                 >
                     <Tabs.Tab value='1' style={{borderRadius: 0}}>Notes</Tabs.Tab>
                     <Tabs.Tab value='2' style={{borderRadius: 0}}>Documents</Tabs.Tab>

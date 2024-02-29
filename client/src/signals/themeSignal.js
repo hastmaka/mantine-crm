@@ -1,7 +1,7 @@
 import {deepSignal} from "deepsignal/react";
 
 export const themeSignal = deepSignal({
-    theme: 'light',
+    theme: 'dark',
 
     toggleTheme: () => {
         const t = themeSignal.theme

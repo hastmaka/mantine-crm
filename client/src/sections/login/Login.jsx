@@ -38,7 +38,13 @@ export default function Login() {
 	return (
 		<Center h='100vh' pos='relative'>
 			<Box pos='absolute' top={10} right={10}>
-				<ActionIcon onClick={themeSignal.toggleTheme}>
+				<ActionIcon
+					variant="default"
+					radius="xl"
+					size="lg"
+					aria-label="profile"
+					onClick={themeSignal.toggleTheme}
+				>
 					{themeSignal.theme === 'dark' ? <IconSun /> : <IconMoonStars />}
 				</ActionIcon>
 			</Box>

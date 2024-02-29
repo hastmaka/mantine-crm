@@ -2,7 +2,7 @@
 //    --severity-color: red
 //}
 .card{
-    border: 0.0625rem solid transparent;
+    border: 0.0625rem solid var(--mantine-color-dark-light);
     transition: all .2s ease;
     &:hover{
         border: 0.0625rem solid var(--mantine-color-default-border)
