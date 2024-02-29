@@ -45,12 +45,12 @@ export default function SignIn () {
 						loginSignal.handleChangeLogin ('forgot')
 					}}
 				>Forgot</Anchor>
-				<Anchor
-					onClick={() => {
-						form.reset()
-						loginSignal.handleChangeLogin ('create')
-					}}
-				>Create Account</Anchor>
+				{/*<Anchor*/}
+				{/*	onClick={() => {*/}
+				{/*		form.reset()*/}
+				{/*		loginSignal.handleChangeLogin ('create')*/}
+				{/*	}}*/}
+				{/*>Create Account</Anchor>*/}
 			</Flex>
 		</form>
 	);
